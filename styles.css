@@ -1,0 +1,298 @@
+/* Reset básico para garantir consistência entre os navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #121212;
+    color: #fff;
+    overflow-x: hidden;
+    margin: 0;
+    height: 100%;
+}
+
+
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilo do cabeçalho */
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilo do cabeçalho */
+.sports-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #1e2a3a; /* Azul escuro suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #bbb;
+    transition: background-color 0.3s ease;
+}
+
+.sports-header:hover {
+    background-color: #263d58; /* Azul mais escuro no hover */
+}
+
+.sports-header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 60px;
+    margin-right: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.logo-text h1 {
+    font-size: 2.5rem;
+    color: #e0e0e0; /* Cor suave para o título */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.logo-text p {
+    font-size: 1rem;
+    color: #bbb;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+/* Menu de navegação */
+.sports-menu ul {
+    display: flex;
+    gap: 40px;
+}
+
+.sports-menu li {
+    list-style: none;
+}
+
+.sports-menu a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #d1d1d1;
+    font-weight: 600;
+    position: relative;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sports-menu a:hover {
+    color: #4a90e2; /* Azul claro no hover */
+    transform: translateY(-5px);
+}
+
+/* Efeito de sublinhado */
+.sports-menu a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #4a90e2; /* Azul claro */
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.sports-menu a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Animações de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.sports-header {
+    animation: fadeIn 1s ease-out;
+}
+
+
+/* Carrossel - ocupa a tela toda */
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow: hidden; /* Evita barra de rolagem */
+}
+
+/* Estilo do carrossel ocupando toda a tela */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    overflow: hidden;
+}
+
+/* Estilo do container do carrossel */
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.carousel-item {
+    position: relative;
+    min-width: 100%;
+    height: 100vh; /* Garantir que cada slide ocupe toda a altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #111;
+}
+
+/* Imagem de fundo do carrossel */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem cobrir toda a área */
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+/* Efeito de opacidade ao passar o mouse sobre o slide */
+.carousel-item:hover img {
+    opacity: 1;
+}
+
+/* Estilo do texto centralizado nas imagens */
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 3rem; /* Tamanho maior para ocupar mais da tela */
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    width: 80%;
+    z-index: 2;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Efeito de animação das frases ao passar o mouse */
+.carousel-item:hover .carousel-text {
+    transform: translate(-50%, -50%) scale(1.1); /* Aumenta a frase */
+    opacity: 1;
+}
+
+/* Títulos */
+.carousel-item h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+/* Controles do carrossel */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+.prev-btn, .next-btn {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    font-size: 3rem;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Estilo de animação */
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.carousel-container {
+    animation: slide-in 1s ease-out;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-text {
+        font-size: 2rem; /* Ajuste no tamanho da fonte para telas menores */
+    }
+    .carousel-item h3 {
+        font-size: 1.5rem; /* Ajuste do título para telas menores */
+    }
+}
